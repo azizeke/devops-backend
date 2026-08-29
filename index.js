@@ -28,7 +28,7 @@ app.get('/api/health', (req, res) => {
 // GET /api/info -> Uygulama bilgisi
 app.get('/api/info', (req, res) => {
   res.json({
-    application: 'Backend Application',
+    application: 'Backend Application v2',
     version: APP_VERSION,
     environment: NODE_ENV
   });
