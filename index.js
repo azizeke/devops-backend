@@ -8,7 +8,8 @@ const PORT = process.env.PORT || 3000;
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const APP_VERSION = process.env.APP_VERSION || '1.0.0';
 
-app.use(cors());
+const ALLOWED_ORIGIN = process.env.CORS_ORIGIN || 'https://aziz-frontend.team-vit-devops.nl';
+app.use(cors({ origin: ALLOWED_ORIGIN }));
 app.use(express.json());
 
 // GET / -> Uygulamanın çalıştığını gösteren cevap
